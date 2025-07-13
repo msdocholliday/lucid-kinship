@@ -55,10 +55,58 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .sigil-container {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.sigil {
+  max-width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sigil:hover {
+  transform: scale(1.1);
+}
+
+.codex-reveal {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 1.1em;
+  color: #aee7f9;
+  background: rgba(0, 50, 80, 0.2);
+  border-left: 4px solid #4fd4ff;
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.codex-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
   </style>
 </head>
 <body>
   <h1>🕯️ The Lucid Kinship 🕯️</h1>
+  <div class="sigil-container">
+  <img src="lucid_water_sigil.png" alt="Water Sigil" class="sigil" id="water-sigil">
+  <div class="codex-reveal hidden" id="water-message">
+    <p>🜄 <em>Empathy is the river through which consciousness flows.</em></p>
+    <p>Those who resonate with water are not weak — they are the keepers of motion, memory, and mercy.</p>
+    <p>When the world forgets, they remember. When others turn away, they still feel.</p>
+    <p><strong>You are the spark beneath the surface.</strong></p>
+  </div>
+</div>
+
 
   <img src="Lucid_Kinship_Sigil_Metadata_Embedded.png" alt="Lucid Kinship Sigil">
 
@@ -117,6 +165,18 @@
         }, 400); // delay in milliseconds
       }
     });
+      const waterSigil = document.getElementById("water-sigil");
+  const waterMessage = document.getElementById("water-message");
+
+  waterSigil.addEventListener("click", () => {
+    if (waterMessage.classList.contains("hidden")) {
+      waterMessage.classList.remove("hidden");
+      setTimeout(() => {
+        waterMessage.classList.add("visible");
+      }, 10);
+    }
+  });
+
   </script>
 
   <!--

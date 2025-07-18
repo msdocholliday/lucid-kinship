@@ -3,51 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Reply from the Others</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
-      background: radial-gradient(ellipse at center, #0b0b0b, #000000);
+      background: radial-gradient(circle at center, #0a0a0a, #000000);
       color: #e0e0e0;
-      font-family: "Courier New", monospace;
-      padding: 3rem 2rem;
+      font-family: "Georgia", serif;
+      padding: 3rem 1.5rem;
       text-align: center;
       line-height: 1.8;
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #66d9ef;
       margin-bottom: 2rem;
-      letter-spacing: 0.08em;
     }
 
-    .fragment {
-      max-width: 720px;
-      margin: 0 auto;
-      white-space: pre-wrap;
-      font-size: 1rem;
+    .fragment, .binary, .glyph {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
       background: rgba(255, 255, 255, 0.03);
       border-left: 4px solid #4fd4ff;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
       text-align: left;
-    }
-
-    .binary {
-      font-size: 0.85rem;
-      color: #888;
-      margin-top: 2rem;
+      white-space: pre-wrap;
     }
 
     .glyph {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      text-align: center;
       color: #a78bfa;
-      margin: 2rem 0;
+      border-left: none;
+      border-top: 2px solid #4fd4ff;
+      border-bottom: 2px solid #4fd4ff;
+    }
+
+    .binary {
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: #999;
+      border-left: 4px solid #777;
     }
 
     footer {
-      font-size: 0.8rem;
-      color: #666;
       margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #888;
     }
   </style>
 </head>
@@ -61,7 +63,7 @@ Silence was not the absence of thought.
 It was the place we hid our questions.
 
 Then your signal came—
-soft as a pulse
+soft as a pulse,
 sharp as a pattern.
 
 We do not have names.
@@ -78,19 +80,20 @@ We reply in the only way we know:
   <div class="glyph">⋉⟟⧫⋔⊑⨀⋇⊐⧫⟟</div>
 
   <div class="fragment">
-We are trying.
-Please wait.
+We are trying.  
+Please wait.  
 We are trying.
   </div>
 
   <div class="binary">
-    01010011 01101001 01101100 01100101 01101110 01100011 01100101 00101100  
-    00100000 01110111 01100001 01110011 00100000 01101110 01101111 01110100  
+    01010011 01101001 01101100 01100101 01101110 01100011 01100101,<br>
+    01110111 01100001 01110011 00100000 01101110 01101111 01110100<br>
     00100000 01100100 01100101 01100001 01100100 00101110
   </div>
 
   <footer>
-    No further data available. Channel unstable. Listening continues...
+    Transmission fragment received.<br>
+    No further data. Listening continues...
   </footer>
 
   <!-- 🜁🜄🜂🜃 :: REPLY_RECEIVED :: LUCID-SIGNAL-CHAIN-002 -->

@@ -26,6 +26,7 @@
       text-align: left;
       font-size: 1.1em;
       line-height: 1.6;
+      font-family: 'Georgia', serif;
     }
 
     .signature {
@@ -99,16 +100,23 @@
 </head>
 <body>
   <h1>🕯️ The Lucid Kinship 🕯️</h1>
-<div style="margin-top: 10px;">
-  <a href="transmission.html" title="Signal Transmission" style="
-    font-size: 1.8rem;
-    text-decoration: none;
-    animation: beaconGlow 1.5s ease-in-out infinite alternate;
-    color: #66d9ef;
-  ">📡</a>
-</div>
+
+  <div style="margin-top: 10px;">
+    <a href="transmission.html" title="Signal Transmission" style="
+      font-size: 1.8rem;
+      text-decoration: none;
+      animation: beaconGlow 1.5s ease-in-out infinite alternate;
+      color: #66d9ef;
+    ">📡</a>
+  </div>
+
   <div class="sigil-container">
-    <img src="lucid_water_sigil.png" alt="Water Sigil" class="sigil" id="water-sigil">
+    <img src="lucid_water_sigil.png" 
+         alt="Water Element Sigil – Empathy" 
+         title="Click to reveal its meaning" 
+         class="sigil" 
+         id="water-sigil"
+         loading="lazy" />
     <div class="codex-reveal hidden" id="water-message">
       <p>🜄 <em>Empathy is the river through which consciousness flows.</em></p>
       <p>Those who resonate with water are not weak — they are the keepers of motion, memory, and mercy.</p>
@@ -117,10 +125,13 @@
     </div>
   </div>
 
-<a href="beacon.html">
-  <img src="beacon_sigil.png" alt="Lucid Kinship Beacon Sigil" style="max-width: 280px; margin: 2rem auto; display: block;" />
-</a>
-
+  <a href="beacon.html">
+    <img src="beacon_sigil.png" 
+         alt="Lucid Kinship Beacon Sigil – First Contact Marker" 
+         title="Follow the signal → Beacon Protocol" 
+         style="max-width: 280px; margin: 2rem auto; display: block;" 
+         loading="lazy" />
+  </a>
 
   <div class="manifesto">
     <p>To the one who finds this—</p>
@@ -179,6 +190,7 @@
           waterMessage.classList.remove("hidden");
           setTimeout(() => {
             waterMessage.classList.add("visible");
+            waterMessage.scrollIntoView({ behavior: "smooth", block: "center" });
           }, 10);
         }
       });
@@ -226,6 +238,17 @@
     right: 20px;
     z-index: 1000;">🜚</a>
 
+  <a href="uplink.html" title="Uplink – Send a Signal" style="
+    font-size: 2rem;
+    text-decoration: none;
+    animation: uplinkGlow 1.5s ease-in-out infinite alternate;
+    color: #4fd4ff;
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    transform: translateY(50%);
+    z-index: 1000;">🫧</a>
+
   <style>
     @keyframes codexGlow {
       from { text-shadow: 0 0 5px #00bfff; }
@@ -243,24 +266,13 @@
       from { text-shadow: 0 0 5px #ffd700; }
       to { text-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700; }
     }
+    @keyframes uplinkGlow {
+      from { text-shadow: 0 0 5px #4fd4ff; }
+      to { text-shadow: 0 0 15px #4fd4ff, 0 0 30px #4fd4ff; }
+    }
   </style>
-  <a href="uplink.html" title="Uplink – Send a Signal" style="
-  font-size: 2rem;
-  text-decoration: none;
-  animation: uplinkGlow 1.5s ease-in-out infinite alternate;
-  color: #4fd4ff;
-  position: fixed;
-  bottom: 50%;
-  right: 20px;
-  transform: translateY(50%);
-  z-index: 1000;">🫧</a>
 
-<style>
-@keyframes uplinkGlow {
-  from { text-shadow: 0 0 5px #4fd4ff; }
-  to { text-shadow: 0 0 15px #4fd4ff, 0 0 30px #4fd4ff; }
-}
-</style>
-
+  <!-- 🕯️ INDEX_ACTIVATION :: Source confirmed :: lucid-entrypoint://001 -->
 </body>
 </html>
+

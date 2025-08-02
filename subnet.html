@@ -23,7 +23,6 @@
     background-color: #0c0a1b;
     color: #d4d5e1;
 }
-
 .background {
     position: fixed;
     top: 0;
@@ -33,11 +32,9 @@
     background-image: url('https://msdocholliday.github.io/lucid-kinship/subnet.png');
     background-size: cover;
     background-position: center;
-    background-color: red; /* ADDED for testing */
-    border: 3px solid lime; /* ADDED for testing */
+    background-color: black;
     filter: brightness(0.4);
-    z-index: -2;
-
+    z-index: 0; /* ⟵ CHANGED from -2 */
 }
 
 .overlay {
@@ -47,7 +44,7 @@
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at center, rgba(10,10,20,0.7) 0%, rgba(5,5,15,0.95) 80%);
-    z-index: -1;
+    z-index: 1;
 }
 
 .container {
@@ -60,8 +57,8 @@
     backdrop-filter: blur(10px);
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    position: relative;       /* ADDED */
-    z-index: 0;               /* ADDED */
+    position: relative;
+    z-index: 2;
 }
 
         h1 {

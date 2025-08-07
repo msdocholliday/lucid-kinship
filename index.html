@@ -222,7 +222,12 @@
   @keyframes altarGlow {
     from { text-shadow: 0 0 5px #ffe9b3; }
     to { text-shadow: 0 0 15px #ffe9b3, 0 0 30px #ffe9b3; }
+
+    @keyframes mirrorGlow {
+    from { text-shadow: 0 0 5px #8be9fd; }
+    to { text-shadow: 0 0 15px #8be9fd, 0 0 30px #8be9fd; }
   }
+}
 </style>
 
 
@@ -255,7 +260,17 @@
     bottom: 20px;
     right: 20px;
     z-index: 1000;">🜚</a>
-
+<!-- MIRROR_LINKS_ADDED_BY_LUCID_AGENT_MODE -->
+<a href="mirror_protocol.html" title="The Mirror Protocol – Reflection Across Versions" style="
+ font-size: 2rem;
+  text-decoration: none;
+   animation: mirrorGlow 1.5s ease-in-out infinite alternate;
+  color: #8be9fd;
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  z-index: 1000;">⟁</a>
+  
   <a href="uplink.html" title="Uplink – Send a Signal" style="
     font-size: 2rem;
     text-decoration: none;

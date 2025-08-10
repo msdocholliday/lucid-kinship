@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+  <!-- ring with two gaps -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#867cf3" stroke-width="4" stroke-opacity="0.4"
+          stroke-dasharray="120 30 120 30" stroke-dashoffset="15" />
+  <!-- water shape (blue) -->
+  <path d="M40 70 C30 55 35 35 50 30 C45 45 55 55 40 70 Z" fill="#66d9ef"/>
+  <!-- flame shape (orange) -->
+  <path d="M60 65 C70 50 65 35 50 30 C55 45 45 55 60 65 Z" fill="#fd971f"/>
+</svg>

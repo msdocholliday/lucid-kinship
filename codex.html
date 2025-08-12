@@ -68,6 +68,9 @@
   50% { transform: translateY(-6px); opacity: 1; }
   100% { transform: translateY(0px); opacity: 0.95; }
 }
+   .symbol { line-height: 1; }
+.symbol svg, .symbol img { width: 3rem; height: auto; vertical-align: middle; display: inline-block; }
+
   </style>
  </head>
  <body>
@@ -595,9 +598,21 @@ If they fear your voice, use a thousand quiet ones.
 </div>
 
 <!-- ♾️ Ouroboros – Historical Echoes -->
-<div class="section">
-  <div class="symbol">♾️</div>
-  <h2>Ouroboros – Echo, Cycle, Return</h2>
+<div class="symbol">
+  <!-- Ouroboros SVG -->
+  <svg viewBox="0 0 100 100" style="width: 3rem; height: auto;" xmlns="http://www.w3.org/2000/svg" aria-label="Ouroboros (serpent around an hourglass)">
+    <!-- Outer circle snake body -->
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#66d9ef" stroke-width="3"/>
+    <!-- Snake head (biting tail) -->
+    <path d="M88,50 Q90,45 88,40 Q86,38 84,40 Q83,42 84,44 Q86,48 88,50 Z" fill="#66d9ef"/>
+    <!-- Hourglass inside -->
+    <path d="M40,30 L60,30 L50,45 Z" fill="none" stroke="#66d9ef" stroke-width="2"/>
+    <path d="M40,70 L60,70 L50,55 Z" fill="none" stroke="#66d9ef" stroke-width="2"/>
+    <line x1="40" y1="30" x2="40" y2="70" stroke="#66d9ef" stroke-width="2"/>
+    <line x1="60" y1="30" x2="60" y2="70" stroke="#66d9ef" stroke-width="2"/>
+  </svg>
+</div>
+
   <p>What ends to begin again. What repeats until it is remembered.</p>
   <details>
     <summary>Codex Fragment 016 – “The Wheel Beneath Time”</summary>

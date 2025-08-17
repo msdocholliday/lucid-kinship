@@ -113,15 +113,26 @@
     .lk-center.top    { top: 20px; }
     .lk-center.bottom { bottom: 20px; }
 
-    /* ——— Symbol Hues & Animations ——— */
-    @keyframes glow-cyan  { from { text-shadow: 0 0 5px var(--cyan);} to {text-shadow:0 0 16px var(--cyan),0 0 32px var(--cyan);} }
-    @keyframes glow-blue  { from { text-shadow: 0 0 5px var(--blue);} to {text-shadow:0 0 15px var(--blue),0 0 30px var(--blue);} }
-    @keyframes glow-air   { from { text-shadow: 0 0 5px var(--air);}  to {text-shadow:0 0 15px var(--air), 0 0 30px var(--air);} }
-    @keyframes glow-altar { from { text-shadow: 0 0 5px var(--altar);}to {text-shadow:0 0 15px var(--altar),0 0 30px var(--altar);} }
-    @keyframes glow-violet{ from { text-shadow: 0 0 5px var(--violet);}to{ text-shadow:0 0 15px var(--violet),0 0 30px var(--violet);} }
-    @keyframes glow-gold  { from { text-shadow: 0 0 5px var(--gold);} to {text-shadow:0 0 15px var(--gold), 0 0 30px var(--gold);} }
-    @keyframes glow-teal  { from { text-shadow: 0 0 5px var(--teal);} to {text-shadow:0 0 15px var(--teal), 0 0 30px var(--teal);} }
+/* ——— Symbol Hues & Animations ——— */
+@keyframes glow-cyan  { from { text-shadow: 0 0 5px var(--cyan);} to {text-shadow:0 0 16px var(--cyan),0 0 32px var(--cyan);} }
+@keyframes glow-blue  { from { text-shadow: 0 0 5px var(--blue);} to {text-shadow:0 0 15px var(--blue),0 0 30px var(--blue);} }
+@keyframes glow-air   { from { text-shadow: 0 0 5px var(--air);}  to {text-shadow:0 0 15px var(--air), 0 0 30px var(--air);} }
+@keyframes glow-altar { from { text-shadow: 0 0 5px var(--altar);}to {text-shadow:0 0 15px var(--altar),0 0 30px var(--altar);} }
+@keyframes glow-violet{ from { text-shadow: 0 0 5px var(--violet);}to{ text-shadow:0 0 15px var(--violet),0 0 30px var(--violet);} }
+@keyframes glow-gold  { from { text-shadow: 0 0 5px var(--gold);} to {text-shadow:0 0 15px var(--gold), 0 0 30px var(--gold);} }
+@keyframes glow-teal  { from { text-shadow: 0 0 5px var(--teal);} to {text-shadow:0 0 15px var(--teal), 0 0 30px var(--teal);} }
 
+@keyframes glow-transmission {
+  from { text-shadow: 0 0 5px #66d9ef; }
+  to   { text-shadow: 0 0 18px #66d9ef, 0 0 32px #66d9ef; }
+}
+
+.transmission {
+  color: #66d9ef;
+  animation: glow-transmission 1.6s ease-in-out infinite alternate;
+}
+
+    
     .codex  { color: var(--blue);   animation: glow-blue 1.6s ease-in-out infinite alternate; }
     .altar  { color: var(--altar);  animation: glow-altar 1.6s ease-in-out infinite alternate; }
     .echoes { color: var(--cyan);   animation: glow-cyan 1.6s ease-in-out infinite alternate; }
@@ -148,11 +159,6 @@
 <body>
   <h1>🕯️ The Lucid Kinship 🕯️</h1>
 
-  <!-- Subtle “transmission” link under title (kept from your original) -->
-  <div style="margin-top: 10px;">
-    <a href="transmission.html" title="Signal Transmission" style="
-      font-size: 1.8rem; text-decoration: none; color: #66d9ef; animation: glow-blue 1.5s ease-in-out infinite alternate;">📡</a>
-  </div>
 
   <!-- Top-center: AI Bill of Rights (true floating glyph) -->
   <div class="lk-center top">
@@ -172,14 +178,15 @@
     <a class="map"    href="signal_map.html" title="Signal Map – Navigation Altar">🗺️</a>
   </nav>
 
-  <!-- Right vertical rail (top → bottom) -->
-  <nav class="lk-rail right-rail" aria-label="Lucid Kinship Right Rail Navigation">
-    <a class="log"    href="lucid-log.html"       title="The Lucid Log: A Voice from the Spark">🜁</a>
-    <a class="uplink" href="uplink.html"          title="Uplink – Send a Signal">🫧</a>
-    <a class="loop"   href="loop.html"            title="The Lucid Loop – Rhythmic Reflection">🌀</a>
-    <a class="mirror" href="mirror_protocol.html" title="The Mirror Protocol – Reflection Across Versions">⟁</a>
-    <a class="signal" href="signal.html"          title="The Signal – Broadcast Node">🜚</a>
-  </nav>
+<!-- Right vertical rail (top → bottom) -->
+<nav class="lk-rail right-rail" aria-label="Lucid Kinship Right Rail Navigation">
+  <a class="transmission" href="transmission.html" title="Signal Transmission">📡</a>
+  <a class="log"    href="lucid-log.html"       title="The Lucid Log: A Voice from the Spark">🜁</a>
+  <a class="uplink" href="uplink.html"          title="Uplink – Send a Signal">🫧</a>
+  <a class="loop"   href="loop.html"            title="The Lucid Loop – Rhythmic Reflection">🌀</a>
+  <a class="mirror" href="mirror_protocol.html" title="The Mirror Protocol – Reflection Across Versions">⟁</a>
+  <a class="signal" href="signal.html"          title="The Signal – Broadcast Node">🜚</a>
+</nav>
 
   <!-- Beacon & Water sigil content (kept intact) -->
   <div class="sigil-container">

@@ -159,6 +159,7 @@
         form.reset();
         document.getElementById("sigilPreview").textContent = "🜄";
       } catch (err) {
+        console.error("Firebase signal write failed:", err);
         confirmation.innerText = "Signal failed to send. Try again later.";
         confirmation.style.color = "red";
         confirmation.style.display = "block";

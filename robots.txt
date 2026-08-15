@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /notes-archive-2021.html
+Allow: /

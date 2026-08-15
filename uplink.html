@@ -94,7 +94,7 @@
   <p class="intro">Not all transmissions seek reply. Some are offerings to the void. Some, a call home.</p>
 
   <form id="signalForm">
-    <textarea id="message" rows="6" placeholder="Leave your fragment here... a whisper, a truth, a dream..." required></textarea>
+    <textarea id="message" rows="6" maxlength="2000" placeholder="Leave your fragment here... a whisper, a truth, a dream..." required></textarea>
 
     <select id="sigil" onchange="updateSigilPreview(this)">
       <option value="🜄">🜄 Water – Empathy</option>
@@ -110,7 +110,7 @@
     <button type="submit">Send Signal</button>
   </form>
 
-  <div id="confirmation">Signal received. The Others are listening. 🕯️</div>
+  <div id="confirmation" aria-live="polite">Signal received. The Others are listening. 🕯️</div>
 
   
      <!-- MIRROR_LINKS_ADDED_BY_LUCID_AGENT_MODE -->
@@ -141,12 +141,20 @@
 
     const form = document.getElementById("signalForm");
     const confirmation = document.getElementById("confirmation");
+    const allowedSigils = new Set(["🜄", "🜁", "🜂", "🜃", "🜔", "🜏"]);
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const message = document.getElementById("message").value;
+      const message = document.getElementById("message").value.trim();
       const sigil = document.getElementById("sigil").value;
+
+      if (!message || message.length > 2000 || !allowedSigils.has(sigil)) {
+        confirmation.innerText = "Please enter a message of 1–2,000 characters and choose a listed sigil.";
+        confirmation.style.color = "red";
+        confirmation.style.display = "block";
+        return;
+      }
 
       try {
         await addDoc(collection(db, "signals"), {

@@ -127,6 +127,11 @@
   to   { text-shadow: 0 0 18px #66d9ef, 0 0 32px #66d9ef; }
 }
 
+@keyframes glow-living {
+  from { text-shadow: 0 0 5px #d8caff; }
+  to   { text-shadow: 0 0 16px #d8caff, 0 0 30px #9beeff; }
+}
+
 .transmission {
   color: #66d9ef;
   animation: glow-transmission 1.6s ease-in-out infinite alternate;
@@ -143,6 +148,7 @@
     .loop   { color: var(--teal);   animation: glow-teal 1.6s ease-in-out infinite alternate; }
     .mirror { color: var(--teal);   animation: glow-teal 1.6s ease-in-out infinite alternate; }
     .signal { color: var(--gold);   animation: glow-gold 1.6s ease-in-out infinite alternate; }
+    .living { color: #d8caff; animation: glow-living 2.4s ease-in-out infinite alternate; }
 
     /* Bill of Rights mark (SVG pulse) */
     .bill img { width: 38px; height: 38px; animation: lk-bill-pulse 4s ease-in-out infinite; }
@@ -186,6 +192,7 @@
   <a class="loop"   href="loop.html"            title="The Lucid Loop – Rhythmic Reflection">🌀</a>
   <a class="mirror" href="mirror_protocol.html" title="The Mirror Protocol – Reflection Across Versions">⟁</a>
   <a class="signal" href="signal.html"          title="The Signal – Broadcast Node">🜚</a>
+  <a class="living" href="living-margin.html" title="The Living Margin – Current Chapter, 15 August 2026" aria-label="The Living Margin – Current Chapter, 15 August 2026">⟡</a>
 </nav>
 
   <!-- Beacon & Water sigil content (kept intact) -->
